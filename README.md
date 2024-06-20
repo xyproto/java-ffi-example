@@ -8,7 +8,7 @@ Print the contents of `results.txt` using `fopen`, `fgets` and `fclose` from the
 
 ### Prerequisites
 
-Set `JAVA_HOME` to Java installation path (version 22 or later).
+Set the `JAVA_HOME` environment variable to the Java installation path (needs to be Java version 22 or later).
 
 For example, for macOS + homebrew + zsh: `export JAVA_HOME=/opt/homebrew/Cellar/openjdk/22.0.1/`.
 
