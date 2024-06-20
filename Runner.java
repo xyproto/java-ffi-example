@@ -4,9 +4,6 @@ import java.lang.foreign.*;
 
 class Runner {
 
-    // we have to run with java 22 so we might as well use the
-    // unnamed classes preview feature. Your IDE might yell at
-    // you and ask to enable preview features.
     public static void main(String[] args) {
         try (Arena allocator = Arena.ofConfined()) {
             var libc = new LibC(allocator);
@@ -16,7 +13,7 @@ class Runner {
                 System.out.println("File could not be opened or invoke call failed");
                 return;
             }
-            MemorySegment buffer = allocator.allocate(100); // allocate 100 bytes
+            MemorySegment buffer = allocator.allocate(100);
             MemorySegment result;
             for (; ; ) {
                 result = libc.fgets(buffer, 100, filePtr);
